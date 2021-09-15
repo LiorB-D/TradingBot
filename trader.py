@@ -66,12 +66,12 @@ while True:
     # Make buy/sell decision
     # This algorithm buys or sells when the moving average crosses the most recent closing price 
 
-    if ma + 0.1 < last_price and not pos_held:
+    if ma + 0.1 < last_price and not pos_held: # Buy when moving average is ten cents below the last price
         print("Buy")
         buy(1, symb)
         pos_held = True
     
-    elif ma - 0.1 > last_price and pos_held:
+    elif ma - 0.1 > last_price and pos_held: # Sell when moving average is ten cents above the last price
         print("Sell")
         sell(1, symb)
         pos_held = False
