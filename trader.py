@@ -35,7 +35,7 @@ def buy(q, s): # Returns nothing, makes call to buy stock
     api.submit_order(
         symbol=s,
         qty=q,
-        side='sell',
+        side='buy',
         type='market',
         time_in_force='gtc'
     )
